@@ -1,6 +1,6 @@
-
 import 'package:iotlabapp/pages/descriptionPage.dart';
 import 'package:flutter/material.dart';
+import 'package:iotlabapp/pages/home.dart';
 
 void main() {
   runApp(LabApp());
@@ -10,32 +10,13 @@ class LabApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Homepage(),
+      debugShowCheckedModeBanner: false,
+      home: Home(),
     );
   }
 }
 
-class Homepage extends StatefulWidget {
-  @override
-  _HomepageState createState() => _HomepageState();
-}
-
-class _HomepageState extends State<Homepage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.blue.shade50,
-      appBar: AppBar(),
-      body: Container(
-          child: RaisedButton(
-            onPressed: (){
-              Navigator.of(context).push(_createRoute());
-            },
-          )
-      ),
-    );
-  }
-}
+//Navigator.of(context).push(_createRoute());
 
 Route _createRoute() {
   return PageRouteBuilder(
