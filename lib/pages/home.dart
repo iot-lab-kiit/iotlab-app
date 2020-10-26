@@ -82,13 +82,31 @@ class _HomeState extends State<Home> {
                       child: Container(
                         child: Padding(
                           padding: const EdgeInsets.only(left: 15),
-                          child: Text(
-                            'Ongoing Events',
-                            style: TextStyle(
-                                fontSize: 30,
-                                color: Colors.black,
-                                fontFamily: 'Signatra'),
-                            textAlign: TextAlign.center,
+                          child: Column(
+                            children: [
+                              Align(
+                                alignment: Alignment.centerLeft,
+                                child: Text(
+                                  'Ongoing Events',
+                                  style: TextStyle(
+                                      fontSize: 30,
+                                      color: Colors.black,
+                                      fontFamily: 'Signatra'),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
+                              Align(
+                                alignment: Alignment.centerLeft,
+                                child: Text(
+                                  'October',
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      color: Colors.black,
+                                      fontFamily: 'Signatra'),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ),

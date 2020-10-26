@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 onGoingEventCard(context, {String cardTitle, String imgName}) {
   return Padding(
-    padding: EdgeInsets.only(top: 40, left: 15, right: 15, bottom: 5),
+    padding: EdgeInsets.only(top: 60, left: 15, right: 15, bottom: 0),
     child: Container(
       height: 150,
       width: 340,
