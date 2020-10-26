@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iotlabapp/pages/profile.dart';
+import 'package:iotlabapp/pages/workPage.dart';
 import 'package:iotlabapp/widgets/appbar.dart';
 import 'package:iotlabapp/widgets/eventCard.dart';
 import 'package:iotlabapp/widgets/ongoingEventCard.dart';
@@ -260,17 +261,16 @@ class _HomeState extends State<Home> {
               },
             ),
             ListTile(
-              title: Text(
-                'Work',
-                style: TextStyle(fontSize: 22),
-              ),
-              onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
-              },
-            ),
+                title: Text(
+                  'Work',
+                  style: TextStyle(fontSize: 22),
+                ),
+                onTap: () => {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => WorkPage()),
+                      ),
+                    }),
             ListTile(
               title: Text(
                 'Services',
