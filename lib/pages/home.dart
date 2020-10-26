@@ -65,16 +65,13 @@ class _HomeState extends State<Home> {
                             imgName: 'hacktoberfest.png'),
                         onGoingEventCard(context,
                             cardTitle: 'Hacktober Fest 2020',
-                            imgName: 'hacktoberfest.jpg'),
+                            imgName: 'hacktoberfest.png'),
                         onGoingEventCard(context,
                             cardTitle: 'Hacktober Fest 2020',
-                            imgName: 'hacktoberfest.jpg'),
+                            imgName: 'hacktoberfest.png'),
                         onGoingEventCard(context,
                             cardTitle: 'Hacktober Fest 2020',
-                            imgName: 'hacktoberfest.jpg'),
-                        onGoingEventCard(context,
-                            cardTitle: 'Hacktober Fest 2020',
-                            imgName: 'hacktoberfest.jpg'),
+                            imgName: 'hacktoberfest.png'),
                       ],
                     ),
                     Padding(
@@ -86,24 +83,30 @@ class _HomeState extends State<Home> {
                             children: [
                               Align(
                                 alignment: Alignment.centerLeft,
-                                child: Text(
-                                  'Ongoing Events',
-                                  style: TextStyle(
-                                      fontSize: 30,
-                                      color: Colors.black,
-                                      fontFamily: 'Signatra'),
-                                  textAlign: TextAlign.center,
+                                child: Padding(
+                                  padding: const EdgeInsets.only(left: 15.0),
+                                  child: Text(
+                                    'Ongoing Events',
+                                    style: TextStyle(
+                                        fontSize: 30,
+                                        color: Colors.black,
+                                        fontFamily: 'Signatra'),
+                                    textAlign: TextAlign.center,
+                                  ),
                                 ),
                               ),
                               Align(
                                 alignment: Alignment.centerLeft,
-                                child: Text(
-                                  'October',
-                                  style: TextStyle(
-                                      fontSize: 20,
-                                      color: Colors.black,
-                                      fontFamily: 'Signatra'),
-                                  textAlign: TextAlign.center,
+                                child: Padding(
+                                  padding: const EdgeInsets.only(left: 15.0),
+                                  child: Text(
+                                    'October',
+                                    style: TextStyle(
+                                        fontSize: 20,
+                                        color: Colors.black,
+                                        fontFamily: 'Signatra'),
+                                    textAlign: TextAlign.center,
+                                  ),
                                 ),
                               ),
                             ],
@@ -150,7 +153,7 @@ class _HomeState extends State<Home> {
                     padding: const EdgeInsets.all(4),
                     child: Container(
                       child: Padding(
-                        padding: const EdgeInsets.only(left: 15),
+                        padding: const EdgeInsets.only(left: 40),
                         child: Text(
                           'Past Events',
                           style: TextStyle(

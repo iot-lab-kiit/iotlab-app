@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 onGoingEventCard(context, {String cardTitle, String imgName}) {
   return Padding(
-    padding: EdgeInsets.only(top: 60, left: 15, right: 15, bottom: 0),
+    padding: EdgeInsets.only(top: 60, left: 10, right: 15, bottom: 0),
     child: Container(
       height: 150,
       width: 340,
@@ -40,26 +40,3 @@ onGoingEventCard(context, {String cardTitle, String imgName}) {
     ),
   );
 }
-
-// Stack(
-//           children: <Widget>[
-//             Image.asset(
-//               'assets/images/$imgName',
-//               fit: BoxFit.cover,
-//             ),
-//             Padding(
-//               padding: const EdgeInsets.only(left: 10, top: 8),
-//               child: Container(
-//                 child: Text(
-//                   cardTitle,
-//                   style: TextStyle(
-//                       fontSize: 30,
-//                       fontWeight: FontWeight.bold,
-//                       color: Colors.white,
-//                       fontFamily: 'Signatra'),
-//                   textAlign: TextAlign.center,
-//                 ),
-//               ),
-//             ),
-//           ],
-//         ),
