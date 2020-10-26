@@ -22,30 +22,33 @@ class _HomeState extends State<Home> {
               flex: 1,
               child: Stack(children: <Widget>[
                 Padding(
-                  padding: EdgeInsets.only(top: 15),
-                  child: Text(
-                    'Hello There,',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 50,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: 'Signatra',
+                  padding: EdgeInsets.only(top: 0),
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: Text(
+                      'Hello There,',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 30,
+                        fontFamily: 'Signatra',
+                      ),
+                      overflow: TextOverflow.ellipsis,
                     ),
-                    overflow: TextOverflow.ellipsis,
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 65),
-                  child: Text(
-                    'We are super excited to have you on board!',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 20,
-                      fontWeight: FontWeight.normal,
+                  padding: EdgeInsets.only(top: 75),
+                  child: Center(
+                    child: Text(
+                      'We are super excited to have you on board!',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                        fontWeight: FontWeight.normal,
+                      ),
+                      overflow: TextOverflow.ellipsis,
                     ),
-                    overflow: TextOverflow.ellipsis,
                   ),
                 ),
               ]),
