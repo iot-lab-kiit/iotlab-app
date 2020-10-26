@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iotlabapp/pages/profile.dart';
 import 'package:iotlabapp/widgets/appbar.dart';
 import 'package:iotlabapp/widgets/eventCard.dart';
 import 'package:iotlabapp/widgets/ongoingEventCard.dart';
@@ -217,9 +218,16 @@ class _HomeState extends State<Home> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 8.0),
-                      child: CircleAvatar(
-                        backgroundColor: Colors.black,
-                        child: Text('RR'),
+                      child: InkWell(
+                        onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ProfilePage()),
+                        ),
+                        child: CircleAvatar(
+                          backgroundColor: Colors.black,
+                          child: Text('RR'),
+                        ),
                       ),
                     ),
                     SizedBox(width: 20),
