@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iotlabapp/widgets/appbar.dart';
+import 'package:iotlabapp/widgets/drawer.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -20,6 +21,7 @@ class _HomePageState extends State<HomePage>
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: header(context, titleText: "Home"),
+        drawer: CustomDrawer(),
         body: Container(
           child: ListView(
             children: [
