@@ -61,6 +61,7 @@ class _WorkPageState extends State<WorkPage> {
               backgroundColor: Colors.white,
             ),
           ],
-        ));
+        )
+    );
   }
 }
