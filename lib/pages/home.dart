@@ -4,6 +4,7 @@ import 'package:iotlabapp/pages/workPage.dart';
 import 'package:iotlabapp/widgets/appbar.dart';
 import 'package:iotlabapp/widgets/eventCard.dart';
 import 'package:iotlabapp/widgets/ongoingEventCard.dart';
+import 'package:iotlabapp/pages/homePage.dart';
 
 class Home extends StatefulWidget {
   static const routeName = '/home';
@@ -253,12 +254,11 @@ class _HomeState extends State<Home> {
                 'Home',
                 style: TextStyle(fontSize: 22),
               ),
-              onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
-              },
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => HomePage()),
+              ),
             ),
             ListTile(
                 title: Text(

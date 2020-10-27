@@ -21,6 +21,7 @@ class _WorkPageState extends State<WorkPage> {
                   style: TextStyle(color: Color(0xff000000), fontSize: 18)),
             )
           ],
-        ));
+        )
+    );
   }
 }
