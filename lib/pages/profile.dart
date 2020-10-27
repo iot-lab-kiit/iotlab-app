@@ -65,11 +65,40 @@ class _ProfilePageState extends State<ProfilePage>
               Padding(
                 padding:
                     const EdgeInsets.only(left: 15.0, right: 15, bottom: 15),
-                child: Text(
-                  "Hello Ayushi,",
-                  style: TextStyle(
-                    fontSize: 26,
-                  ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Hello Ayushi,",
+                      style: TextStyle(
+                        fontSize: 26,
+                      ),
+                    ),
+                    MaterialButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => EditProfilePage()),
+                        );
+                      },
+                      child: Text(
+                        'Edit Profile',
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                      ),
+                      minWidth: 100,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(
+                          20.0,
+                        ),
+                        side: BorderSide(
+                          color: Colors.white,
+                        ),
+                      ),
+                      color: Colors.white,
+                    ),
+                  ],
                 ),
               ),
               Padding(
@@ -262,33 +291,6 @@ profileDetails(context) {
                 ],
               ),
             ),
-          ),
-          SizedBox(
-            width: 45,
-          ),
-          MaterialButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => EditProfilePage()),
-              );
-            },
-            child: Text(
-              'Edit Profile',
-              style: TextStyle(
-                color: Colors.black,
-              ),
-            ),
-            minWidth: 100,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(
-                20.0,
-              ),
-              side: BorderSide(
-                color: Colors.white,
-              ),
-            ),
-            color: Colors.white,
           ),
         ],
       ),
