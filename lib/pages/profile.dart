@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iotlabapp/pages/editProfile.dart';
 import 'package:iotlabapp/widgets/appbar.dart';
 import 'package:iotlabapp/widgets/drawer.dart';
 
@@ -13,7 +14,7 @@ class _ProfilePageState extends State<ProfilePage>
 
   @override
   void initState() {
-    _controller = new TabController(length: 3, vsync: this);
+    _controller = new TabController(length: 2, vsync: this);
     super.initState();
   }
 
@@ -31,9 +32,9 @@ class _ProfilePageState extends State<ProfilePage>
                 padding:
                     const EdgeInsets.only(left: 15.0, right: 15, bottom: 15),
                 child: Text(
-                  "Hello Ayushi!",
+                  "Hello Ayushi,",
                   style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 26,
                   ),
                 ),
               ),
@@ -50,9 +51,6 @@ class _ProfilePageState extends State<ProfilePage>
                       new Tab(
                         text: 'Messages',
                       ),
-                      new Tab(
-                        text: 'Edit Profile',
-                      ),
                     ],
                   ),
                 ),
@@ -63,7 +61,6 @@ class _ProfilePageState extends State<ProfilePage>
                   controller: _controller,
                   children: <Widget>[
                     new Tasks(),
-                    new Container(),
                     new Container(),
                   ],
                 ),
@@ -228,7 +225,34 @@ profileDetails(context) {
                 ],
               ),
             ),
-          )
+          ),
+          SizedBox(
+            width: 45,
+          ),
+          MaterialButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => EditProfilePage()),
+              );
+            },
+            child: Text(
+              'Edit Profile',
+              style: TextStyle(
+                color: Colors.black,
+              ),
+            ),
+            minWidth: 100,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(
+                20.0,
+              ),
+              side: BorderSide(
+                color: Colors.white,
+              ),
+            ),
+            color: Colors.white,
+          ),
         ],
       ),
     ),
