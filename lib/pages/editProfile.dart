@@ -17,7 +17,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
         leading: Builder(
           builder: (context) => IconButton(
             icon: Icon(
-              Icons.arrow_back_ios_rounded,
+              Icons.arrow_back_ios,
               color: Colors.black,
               size: 30,
             ),

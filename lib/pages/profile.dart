@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:iotlabapp/pages/ToDo.dart';
 import 'package:iotlabapp/pages/editProfile.dart';
-import 'package:iotlabapp/widgets/appbar.dart';
 import 'package:iotlabapp/widgets/drawer.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -25,7 +25,7 @@ class _ProfilePageState extends State<ProfilePage>
           leading: Builder(
             builder: (context) => IconButton(
               icon: Icon(
-                Icons.arrow_back_ios_rounded,
+                Icons.arrow_back_ios,
                 color: Colors.black,
                 size: 30,
               ),
@@ -121,7 +121,10 @@ class _TasksState extends State<Tasks> {
                 colour: Color(0xff23395d),
                 tasktitle: "Todo",
                 func: () {
-                  print("Todo pressed!");
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => TasksScreen())
+                  );
                 },
                 tag: "todo"),
             CustomTaskTile(
