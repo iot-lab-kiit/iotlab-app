@@ -1,6 +1,5 @@
 import 'package:iotlabapp/pages/descriptionPage.dart';
 import 'package:flutter/material.dart';
-import 'package:iotlabapp/pages/editProfile.dart';
 import 'package:iotlabapp/pages/home.dart';
 
 void main() {
@@ -12,7 +11,7 @@ class LabApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: EditProfilePage(),
+      home: Home(),
     );
   }
 }

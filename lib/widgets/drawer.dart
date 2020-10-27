@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:iotlabapp/pages/homePage.dart';
 import 'package:iotlabapp/pages/profile.dart';
+import 'package:iotlabapp/pages/home.dart';
 import 'package:iotlabapp/pages/workPage.dart';
 
 class CustomDrawer extends StatefulWidget {
@@ -59,8 +59,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                     child: InkWell(
                       onTap: () => Navigator.push(
                         context,
-                        MaterialPageRoute(
-                            builder: (context) => ProfilePage()),
+                        MaterialPageRoute(builder: (context) => ProfilePage()),
                       ),
                       child: CircleAvatar(
                         backgroundColor: Colors.black,
@@ -92,8 +91,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
             ),
             onTap: () => Navigator.push(
               context,
-              MaterialPageRoute(
-                  builder: (context) => HomePage()),
+              MaterialPageRoute(builder: (context) => Home()),
             ),
           ),
           ListTile(
@@ -102,11 +100,11 @@ class _CustomDrawerState extends State<CustomDrawer> {
                 style: TextStyle(fontSize: 22),
               ),
               onTap: () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => WorkPage()),
-                ),
-              }),
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => WorkPage()),
+                    ),
+                  }),
           ListTile(
             title: Text(
               'Services',
