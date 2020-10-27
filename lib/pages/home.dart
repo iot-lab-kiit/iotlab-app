@@ -14,7 +14,10 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: header(context, titleText: "Home"),
+      appBar: header(
+        context,
+        titleText: "Home",
+      ),
       body: Container(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

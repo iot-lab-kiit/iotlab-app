@@ -21,7 +21,41 @@ class _ProfilePageState extends State<ProfilePage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: header(context, titleText: "Profile"),
+        appBar: AppBar(
+          leading: Builder(
+            builder: (context) => IconButton(
+              icon: Icon(
+                Icons.arrow_back_ios_rounded,
+                color: Colors.black,
+                size: 30,
+              ),
+              onPressed: () => Navigator.pop(context),
+            ),
+          ),
+          backgroundColor: Colors.transparent,
+          elevation: 0.0,
+          title: Text(
+            "Profile",
+            style: TextStyle(
+              color: Colors.black,
+              fontFamily: "Signatra",
+              fontSize: 22.0,
+            ),
+            overflow: TextOverflow.ellipsis,
+          ),
+          actions: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(40),
+                child: Image.asset(
+                  'assets/images/iot.png',
+                ),
+              ),
+            ),
+          ],
+          centerTitle: true,
+        ),
         drawer: CustomDrawer(),
         body: Container(
           child: ListView(

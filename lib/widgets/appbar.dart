@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
-header(context, {bool isAppTitle = false, String titleText}) {
+header(
+  context, {
+  bool isAppTitle = false,
+  String titleText,
+}) {
   return AppBar(
     leading: Builder(
       builder: (context) => IconButton(
@@ -24,19 +28,15 @@ header(context, {bool isAppTitle = false, String titleText}) {
       overflow: TextOverflow.ellipsis,
     ),
     actions: [
-      InkWell(
-          onTap: () {
-            print('Click iot icon');
-          },
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(40),
-              child: Image.asset(
-                'assets/images/iot.png',
-              ),
-            ),
-          )),
+      Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(40),
+          child: Image.asset(
+            'assets/images/iot.png',
+          ),
+        ),
+      ),
     ],
     centerTitle: true,
   );
