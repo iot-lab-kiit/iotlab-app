@@ -106,7 +106,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
             height: 10,
           ),
           ListTile(
-            leading: const Icon(Icons.arrow_forward_ios_rounded),
+            leading: const Icon(Icons.arrow_forward),
             title: const Text('Change Password'),
           ),
           MaterialButton(
