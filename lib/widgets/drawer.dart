@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iotlabapp/common/ui_constants.dart';
 import 'package:iotlabapp/pages/loginPage.dart';
 import 'package:iotlabapp/pages/profile.dart';
 import 'package:iotlabapp/pages/home.dart';
@@ -68,12 +69,12 @@ class _CustomDrawerState extends State<CustomDrawer> {
                       ),
                     ),
                   ),
-                  SizedBox(width: 20),
+                  SizedBox(width: UIConstants.fitToWidth(20, context)),
                   Text('Rohan Roy Chowdhury',
                       style: TextStyle(fontSize: 15, color: Colors.black))
                 ],
               ),
-              SizedBox(height: 10),
+              SizedBox(height: UIConstants.fitToHeight(10, context)),
               Align(
                 alignment: Alignment.centerLeft,
                 child: Padding(
@@ -84,7 +85,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
               )
             ],
           ),
-          SizedBox(height: 10),
+          SizedBox(height: UIConstants.fitToHeight(10, context)),
           ListTile(
             title: Text(
               'Home',
@@ -165,7 +166,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
             },
           ),
           SizedBox(
-            height: 100,
+            height: UIConstants.fitToHeight(80, context),
           ),
           ListTile(
             trailing: Text(

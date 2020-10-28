@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iotlabapp/common/ui_constants.dart';
 import 'package:iotlabapp/pages/ToDo.dart';
 import 'package:iotlabapp/pages/editProfile.dart';
 import 'package:iotlabapp/widgets/drawer.dart';
@@ -78,7 +79,8 @@ class _ProfilePageState extends State<ProfilePage>
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => EditProfilePage()),
+                          MaterialPageRoute(
+                              builder: (context) => EditProfilePage()),
                         );
                       },
                       child: Text(
@@ -87,7 +89,7 @@ class _ProfilePageState extends State<ProfilePage>
                           color: Colors.black,
                         ),
                       ),
-                      minWidth: 100,
+                      minWidth: UIConstants.fitToWidth(100, context),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(
                           20.0,
@@ -119,7 +121,7 @@ class _ProfilePageState extends State<ProfilePage>
                 ),
               ),
               new Container(
-                height: 500.0,
+                height: UIConstants.fitToHeight(500, context),
                 child: new TabBarView(
                   controller: _controller,
                   children: <Widget>[
@@ -150,10 +152,8 @@ class _TasksState extends State<Tasks> {
                 colour: Color(0xff23395d),
                 tasktitle: "Todo",
                 func: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => TasksScreen())
-                  );
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => TasksScreen()));
                 },
                 tag: "todo"),
             CustomTaskTile(
@@ -201,7 +201,7 @@ class _CustomTaskTileState extends State<CustomTaskTile> {
         Padding(
           padding: const EdgeInsets.all(15.0),
           child: Container(
-            height: 80,
+            height: UIConstants.fitToHeight(80, context),
             width: MediaQuery.of(context).size.width - 20,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15),
@@ -225,8 +225,8 @@ class _CustomTaskTileState extends State<CustomTaskTile> {
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 SizedBox(
-                  width: 40,
-                  height: 40,
+                  width: UIConstants.fitToWidth(40, context),
+                  height: UIConstants.fitToHeight(40, context),
                   child: FloatingActionButton(
                     heroTag: widget.tag,
                     backgroundColor: Colors.white70,
@@ -260,7 +260,7 @@ profileDetails(context) {
             ),
           ),
           SizedBox(
-            width: 10,
+            width: UIConstants.fitToWidth(10, context),
           ),
           Flexible(
             child: Container(

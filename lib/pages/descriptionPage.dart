@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:iotlabapp/common/ui_constants.dart';
 
 class DescriptionPage extends StatefulWidget {
   @override
@@ -16,7 +17,7 @@ class _DescriptionPageState extends State<DescriptionPage> {
           Stack(
             children: [
               Container(
-                height: 250,
+                height: UIConstants.fitToHeight(230, context),
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(
@@ -94,7 +95,7 @@ class _DescriptionPageState extends State<DescriptionPage> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Container(
-                        height: 55,
+                        height: UIConstants.fitToHeight(55, context),
                         child: Align(
                           alignment: Alignment.centerLeft,
                           child: Padding(
@@ -112,7 +113,7 @@ class _DescriptionPageState extends State<DescriptionPage> {
                       Column(
                         children: [
                           Container(
-                            height: 500,
+                            height: UIConstants.fitToHeight(500, context),
                             decoration: BoxDecoration(
                               color: Color(0xffE6F7FB),
                               borderRadius: BorderRadius.only(

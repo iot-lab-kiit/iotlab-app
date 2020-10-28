@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 
+import 'package:iotlabapp/common/ui_constants.dart';
+
 eventCard(context, {String cardTitle, String cardBody, String eventOwner}) {
   var arr = [
     Color(0xff7F2CCB),
@@ -10,8 +12,8 @@ eventCard(context, {String cardTitle, String cardBody, String eventOwner}) {
   return Padding(
     padding: const EdgeInsets.only(top: 50, bottom: 10, left: 15, right: 15),
     child: Container(
-      height: 80,
-      width: 180,
+      height: UIConstants.fitToHeight(80, context),
+      width: UIConstants.fitToHeight(170, context),
       child: Card(
         color: arr[random.nextInt(2)],
         elevation: 3.0,

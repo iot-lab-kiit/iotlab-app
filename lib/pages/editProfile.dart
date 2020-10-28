@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:iotlabapp/widgets/appbar.dart';
+import 'package:iotlabapp/common/ui_constants.dart';
 
 class EditProfilePage extends StatefulWidget {
   EditProfilePage({Key key}) : super(key: key);
@@ -69,7 +69,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                 color: Colors.black,
               ),
             ),
-            minWidth: 100,
+            minWidth: UIConstants.fitToWidth(100, context),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(
                 12.0,
@@ -80,7 +80,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
             ),
             color: Colors.white,
           ),
-          SizedBox(height: 30),
+          SizedBox(height: UIConstants.fitToHeight(30, context)),
           Align(
               alignment: Alignment.centerLeft,
               child: Padding(
@@ -98,7 +98,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
             ),
           ),
           SizedBox(
-            height: 15,
+            height: UIConstants.fitToHeight(15, context),
           ),
           Align(
               alignment: Alignment.centerLeft,
@@ -117,7 +117,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
             ),
           ),
           SizedBox(
-            height: 15,
+            height: UIConstants.fitToHeight(15, context),
           ),
           Align(
             alignment: Alignment.centerLeft,
@@ -137,7 +137,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
             ),
           ),
           SizedBox(
-            height: 10,
+            height: UIConstants.fitToHeight(10, context),
           ),
           ListTile(
             leading: const Icon(Icons.arrow_forward),

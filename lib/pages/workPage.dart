@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:iotlabapp/widgets/appbar.dart';
 import 'package:iotlabapp/widgets/work.dart';
 
 class WorkPage extends StatefulWidget {
@@ -48,53 +47,58 @@ class _WorkPageState extends State<WorkPage> {
           ],
           centerTitle: true,
         ),
-        body: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 15.0, top: 15),
-              child: Text('Recent Projects',
-                  style: TextStyle(color: Color(0xff000000), fontSize: 18)),
-            ),
-            display1(
-              context,
-              "Bitscan",
-              "A note scanning app",
-              Color(0xff000000),
-              Colors.black,
-              Color(0xffF0E100),
-              "Progress",
-              "Ongoing",
-            ),
-            display1(
-              context,
-              "Beacon",
-              "IoT based app",
-              Color(0xff000000),
-              Colors.black,
-              Color(0xff06D6A0),
-              "Progress",
-              "Started",
-            ),
-            display1(
-              context,
-              "Skillsly",
-              "Education app",
-              Color(0xff000000),
-              Colors.black,
-              Color(0xff9DD6FF),
-              "Progress",
-              "On Hold",
-            ),
-            FloatingActionButton(
-              onPressed: null,
-              child: Icon(
-                Icons.add,
-                color: Colors.black,
-                size: 30,
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 15.0, top: 15),
+                child: Text('Recent Projects',
+                    style: TextStyle(color: Color(0xff000000), fontSize: 18)),
               ),
-              backgroundColor: Colors.white,
-            ),
-          ],
+              display1(
+                context,
+                "Bitscan",
+                "A note scanning app",
+                Color(0xff000000),
+                Colors.black,
+                Color(0xffF0E100),
+                "Progress",
+                "Ongoing",
+              ),
+              display1(
+                context,
+                "Beacon",
+                "IoT based app",
+                Color(0xff000000),
+                Colors.black,
+                Color(0xff06D6A0),
+                "Progress",
+                "Started",
+              ),
+              display1(
+                context,
+                "Skillsly",
+                "Education app",
+                Color(0xff000000),
+                Colors.black,
+                Color(0xff9DD6FF),
+                "Progress",
+                "On Hold",
+              ),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 8.0),
+                child: FloatingActionButton(
+                  onPressed: null,
+                  child: Icon(
+                    Icons.add,
+                    color: Colors.black,
+                    size: 30,
+                  ),
+                  backgroundColor: Colors.white,
+                ),
+              ),
+            ],
+          ),
         ));
   }
 }

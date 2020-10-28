@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:iotlabapp/common/ui_constants.dart';
 
 class AddTaskScreen extends StatelessWidget {
   AddTaskScreen({this.addTaskCallback, this.newTaskTitle});
@@ -26,7 +27,7 @@ class AddTaskScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 10,
+                height: UIConstants.fitToHeight(8, context),
               ),
               TextField(
                 autofocus: true,
@@ -36,7 +37,7 @@ class AddTaskScreen extends StatelessWidget {
                 },
               ),
               SizedBox(
-                height: 10,
+                height: UIConstants.fitToHeight(8, context),
               ),
               FlatButton(
                 onPressed: () {

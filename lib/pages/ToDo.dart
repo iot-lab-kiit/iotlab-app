@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
 import 'package:flutter/material.dart';
+import 'package:iotlabapp/common/ui_constants.dart';
 import 'package:iotlabapp/models/taskmodel.dart';
 import 'package:iotlabapp/models/todomodel.dart';
 
@@ -135,7 +136,7 @@ class TaskTile extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 10.0, bottom: 10),
       child: Container(
-          height: 50,
+          height: UIConstants.fitToHeight(50, context),
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(10),

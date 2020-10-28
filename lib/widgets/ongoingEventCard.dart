@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:iotlabapp/common/ui_constants.dart';
 import 'package:iotlabapp/pages/descriptionPage.dart';
 
 onGoingEventCard(context, {String cardTitle, String imgName}) {
   return Padding(
     padding: EdgeInsets.only(top: 60, left: 10, right: 15, bottom: 0),
     child: Container(
-      height: 150,
-      width: 340,
+      height: UIConstants.fitToHeight(150, context),
+      width: UIConstants.fitToWidth(300, context),
       child: InkWell(
         onTap: () => Navigator.push(
           context,

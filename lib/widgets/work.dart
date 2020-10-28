@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iotlabapp/common/ui_constants.dart';
 
 display1(
   BuildContext context,
@@ -24,7 +25,7 @@ display1(
           borderRadius: BorderRadius.circular(15),
         ),
         width: MediaQuery.of(context).size.width - 40,
-        height: 140,
+        height: UIConstants.fitToHeight(140, context),
         child: Column(
           children: [
             ListTile(
@@ -77,7 +78,7 @@ display1(
               ),
             ),
             SizedBox(
-              height: 10,
+              height: UIConstants.fitToHeight(10, context),
             ),
             Row(
               children: [
