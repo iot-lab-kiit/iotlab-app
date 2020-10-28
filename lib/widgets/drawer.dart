@@ -96,6 +96,16 @@ class _CustomDrawerState extends State<CustomDrawer> {
             ),
           ),
           ListTile(
+            title: Text(
+              'Profile',
+              style: TextStyle(fontSize: 22),
+            ),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => ProfilePage()),
+            ),
+          ),
+          ListTile(
               title: Text(
                 'Work',
                 style: TextStyle(fontSize: 22),

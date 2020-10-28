@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:iotlabapp/pages/ToDo.dart';
 import 'package:iotlabapp/pages/editProfile.dart';
-import 'package:iotlabapp/widgets/appbar.dart';
 import 'package:iotlabapp/widgets/drawer.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -25,7 +25,7 @@ class _ProfilePageState extends State<ProfilePage>
           leading: Builder(
             builder: (context) => IconButton(
               icon: Icon(
-                Icons.arrow_back_ios_rounded,
+                Icons.arrow_back_ios,
                 color: Colors.black,
                 size: 30,
               ),
@@ -65,11 +65,40 @@ class _ProfilePageState extends State<ProfilePage>
               Padding(
                 padding:
                     const EdgeInsets.only(left: 15.0, right: 15, bottom: 15),
-                child: Text(
-                  "Hello Ayushi,",
-                  style: TextStyle(
-                    fontSize: 26,
-                  ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Hello Ayushi,",
+                      style: TextStyle(
+                        fontSize: 26,
+                      ),
+                    ),
+                    MaterialButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => EditProfilePage()),
+                        );
+                      },
+                      child: Text(
+                        'Edit Profile',
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                      ),
+                      minWidth: 100,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(
+                          20.0,
+                        ),
+                        side: BorderSide(
+                          color: Colors.white,
+                        ),
+                      ),
+                      color: Colors.white,
+                    ),
+                  ],
                 ),
               ),
               Padding(
@@ -121,7 +150,10 @@ class _TasksState extends State<Tasks> {
                 colour: Color(0xff23395d),
                 tasktitle: "Todo",
                 func: () {
-                  print("Todo pressed!");
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => TasksScreen())
+                  );
                 },
                 tag: "todo"),
             CustomTaskTile(
@@ -259,33 +291,6 @@ profileDetails(context) {
                 ],
               ),
             ),
-          ),
-          SizedBox(
-            width: 45,
-          ),
-          MaterialButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => EditProfilePage()),
-              );
-            },
-            child: Text(
-              'Edit Profile',
-              style: TextStyle(
-                color: Colors.black,
-              ),
-            ),
-            minWidth: 100,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(
-                20.0,
-              ),
-              side: BorderSide(
-                color: Colors.white,
-              ),
-            ),
-            color: Colors.white,
           ),
         ],
       ),

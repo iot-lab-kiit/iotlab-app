@@ -99,6 +99,15 @@ class _TasksScreenState extends State<TasksScreen> {
               ],
             ),
           ),
+          Center(
+            child: Padding(
+              padding: const EdgeInsets.only(top: 15.0),
+              child: Text(
+                '${tasks.length} tasks to be done!',
+                style: TextStyle(color: Colors.black26, fontSize: 20),
+              ),
+            ),
+          ),
           Expanded(
             child: Container(
               padding: EdgeInsets.symmetric(horizontal: 20),
