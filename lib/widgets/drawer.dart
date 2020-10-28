@@ -59,10 +59,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                   Padding(
                     padding: const EdgeInsets.only(left: 8.0),
                     child: InkWell(
-                      onTap: () => Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => ProfilePage()),
-                      ),
+                      onTap: () {},
                       child: CircleAvatar(
                         backgroundColor: Colors.black,
                         child: Text('RR'),
