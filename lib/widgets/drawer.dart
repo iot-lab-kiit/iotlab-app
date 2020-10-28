@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iotlabapp/pages/loginPage.dart';
 import 'package:iotlabapp/pages/profile.dart';
 import 'package:iotlabapp/pages/home.dart';
 import 'package:iotlabapp/pages/workPage.dart';
@@ -158,14 +159,12 @@ class _CustomDrawerState extends State<CustomDrawer> {
           ),
           ListTile(
             trailing: Text(
-              'Login',
+              'Logout',
               style: TextStyle(color: Colors.black, fontSize: 20),
             ),
             onTap: () {
-              // Update the state of the app
-              // ...
-              // Then close the drawer
-              Navigator.pop(context);
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => LoginPage()));
             },
           ),
         ],

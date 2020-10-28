@@ -1,6 +1,8 @@
 import 'package:iotlabapp/pages/descriptionPage.dart';
 import 'package:flutter/material.dart';
 import 'package:iotlabapp/pages/home.dart';
+import 'package:iotlabapp/pages/loginPage.dart';
+import 'package:iotlabapp/pages/splashScreen.dart';
 
 void main() {
   runApp(LabApp());
@@ -11,7 +13,7 @@ class LabApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      home: SplashScreen(),
     );
   }
 }
