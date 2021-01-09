@@ -126,13 +126,82 @@ class _ProfilePageState extends State<ProfilePage>
                   controller: _controller,
                   children: <Widget>[
                     new Tasks(),
-                    new Container(),
+                    new Messages(),
                   ],
                 ),
               ),
             ],
           ),
         ));
+  }
+}
+
+class Messages extends StatefulWidget {
+  @override
+  _MessagesState createState() => _MessagesState();
+}
+
+class _MessagesState extends State<Messages> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Container(
+            child: Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                '2 unread messages',
+                style: TextStyle(
+                  color: Colors.black,
+                ),
+              ),
+              Icon(
+                Icons.message,
+                color: Colors.black,
+                size: 30.0,
+              )
+            ],
+          ),
+        ),
+        SizedBox(
+          height: UIConstants.fitToHeight(10, context),
+        ),
+        CustomMessageTile(
+            message: "Clean the mess",
+            name: "Monica Geller",
+            time: "11:30 am",
+            imageurl:
+                "https://w7.pngwing.com/pngs/446/593/png-transparent-girl-wearing-eyeglasses-art-cartoon-drawing-illustration-cartoon-girl-cartoon-character-child-face.png"),
+        CustomMessageTile(
+            message: "I'm so scared of",
+            name: "Chandler Bing",
+            time: "10:30 am",
+            imageurl:
+                "https://www.woolha.com/media/2020/03/flutter-circleavatar-radius.jpg"),
+        CustomMessageTile(
+            message: "Clean the mess",
+            name: "Monica Geller",
+            time: "11:30 am",
+            imageurl:
+                "https://w7.pngwing.com/pngs/446/593/png-transparent-girl-wearing-eyeglasses-art-cartoon-drawing-illustration-cartoon-girl-cartoon-character-child-face.png"),
+        CustomMessageTile(
+            message: "I'm so scared of",
+            name: "Chandler Bing",
+            time: "10:30 am",
+            imageurl:
+                "https://www.woolha.com/media/2020/03/flutter-circleavatar-radius.jpg"),
+        CustomMessageTile(
+            message: "Clean the mess",
+            name: "Monica Geller",
+            time: "11:30 am",
+            imageurl:
+                "https://w7.pngwing.com/pngs/446/593/png-transparent-girl-wearing-eyeglasses-art-cartoon-drawing-illustration-cartoon-girl-cartoon-character-child-face.png"),
+      ],
+    )));
   }
 }
 
@@ -170,9 +239,128 @@ class _TasksState extends State<Tasks> {
                   print("Done pressed!");
                 },
                 tag: "done"),
+            Padding(
+              padding:
+                  const EdgeInsets.only(top: 10.0, left: 50.0, right: 50.0),
+              child: MaterialButton(
+                onPressed: () {},
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Create Another List',
+                      style: TextStyle(
+                        color: Colors.black,
+                      ),
+                    ),
+                    Icon(
+                      Icons.add,
+                      color: Colors.black,
+                      size: 30.0,
+                    )
+                  ],
+                ),
+                minWidth: UIConstants.fitToWidth(100, context),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(
+                    20.0,
+                  ),
+                  side: BorderSide(
+                    color: Colors.white,
+                  ),
+                ),
+                color: Colors.white,
+              ),
+            ),
           ],
         ),
       ),
+    );
+  }
+}
+
+class CustomMessageTile extends StatefulWidget {
+  final String name;
+  final String message;
+  final String time;
+  final String imageurl;
+
+  CustomMessageTile(
+      {@required this.message,
+      @required this.name,
+      @required this.time,
+      @required this.imageurl});
+
+  @override
+  _CustomMessageTileState createState() => _CustomMessageTileState();
+}
+
+class _CustomMessageTileState extends State<CustomMessageTile> {
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(top: 10.0, left: 15.0, right: 15.0),
+          child: Container(
+            height: UIConstants.fitToHeight(50, context),
+            width: MediaQuery.of(context).size.width - 20,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(15),
+              color: Colors.white,
+            ),
+            child: Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: CircleAvatar(
+                    radius: 20,
+                    backgroundImage: NetworkImage("${widget.imageurl}"),
+                  ),
+                ),
+                SizedBox(
+                  width: UIConstants.fitToWidth(7.0, context),
+                ),
+                Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 12.0),
+                      child: Text(
+                        '${widget.name}',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: UIConstants.fitToHeight(5, context),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 10.0),
+                      child: Text(
+                        '${widget.message}',
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  width: UIConstants.fitToWidth(100, context),
+                ),
+                Text(
+                  '${widget.time}',
+                  style: TextStyle(
+                    color: Colors.black,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        )
+      ],
     );
   }
 }
