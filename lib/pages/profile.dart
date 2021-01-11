@@ -242,35 +242,28 @@ class _TasksState extends State<Tasks> {
             Padding(
               padding:
                   const EdgeInsets.only(top: 10.0, left: 50.0, right: 50.0),
-              child: MaterialButton(
-                onPressed: () {},
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'Create Another List',
-                      style: TextStyle(
-                        color: Colors.black,
+              child: OutlineButton(
+                  borderSide: BorderSide(
+                      color: Colors.black, style: BorderStyle.solid, width: 1),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Create Another List',
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
                       ),
-                    ),
-                    Icon(
-                      Icons.add,
-                      color: Colors.black,
-                      size: 30.0,
-                    )
-                  ],
-                ),
-                minWidth: UIConstants.fitToWidth(100, context),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(
-                    20.0,
+                      Icon(
+                        Icons.add,
+                        color: Colors.black,
+                        size: 20.0,
+                      )
+                    ],
                   ),
-                  side: BorderSide(
-                    color: Colors.white,
-                  ),
-                ),
-                color: Colors.white,
-              ),
+                  onPressed: null,
+                  shape: new RoundedRectangleBorder(
+                      borderRadius: new BorderRadius.circular(30.0))),
             ),
           ],
         ),
